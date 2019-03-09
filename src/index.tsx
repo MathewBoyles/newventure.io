@@ -2,13 +2,12 @@ import "reflect-metadata";
 
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-
-import "./styles/main.scss";
+import { MainView } from "./view/main.view";
 
 class Main {
   public init() {
     ReactDOM.render(
-      <div>Hello World</div>,
+      <MainView />,
       document.getElementById("appRoot"),
     );
   }
