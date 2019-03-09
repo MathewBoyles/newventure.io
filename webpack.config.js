@@ -1,17 +1,17 @@
-const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require("webpack");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: './src/index.tsx',
+  entry: "./src/index.tsx",
 
   node: {
-    fs: 'empty'
+    fs: "empty"
   },
 
   output: {
-    filename: 'main.js',
-    path: __dirname + '/dist',
-    publicPath: '/'
+    filename: "main.js",
+    path: __dirname + "/dist",
+    publicPath: "/"
   },
 
   devServer: {
@@ -19,30 +19,39 @@ module.exports = {
     historyApiFallback: true
   },
 
-  devtool: 'source-map',
+  devtool: "source-map",
 
   resolve: {
     extensions: [
-      '.ts',
-      '.tsx',
-      '.js',
-      '.jsx',
-      '.yaml'
+      ".ts",
+      ".tsx",
+      ".js",
+      ".jsx",
+      ".yaml"
     ]
   },
 
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
-        loader: 'awesome-typescript-loader',
-        exclude: '/node_modules/'
+        test: /\.scss$/,
+        use: [
+          "style-loader",
+          "css-loader",
+          "sass-loader"
+        ]
       },
 
       {
-        enforce: 'pre',
+        test: /\.tsx?$/,
+        loader: "awesome-typescript-loader",
+        exclude: "/node_modules/"
+      },
+
+      {
+        enforce: "pre",
         test: /\.js$/,
-        loader: 'source-map-loader'
+        loader: "source-map-loader"
       }
     ]
   },
@@ -50,8 +59,8 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
-      template: __dirname + '/src/index.ejs',
-      inject: 'body'
+      template: __dirname + "/src/index.ejs",
+      inject: "body"
     })
   ]
 }
