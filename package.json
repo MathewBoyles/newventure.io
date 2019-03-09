@@ -7,6 +7,7 @@
   "author": "Mathew Boyles <hello@mathewboyles.com>",
   "license": "MIT",
   "dependencies": {
+    "@types/history": "^4.7.2",
     "@types/react": "^16.8.7",
     "@types/react-dom": "^16.8.2",
     "@types/react-router-dom": "^4.3.1",
@@ -14,6 +15,7 @@
     "@types/reflux": "^6.4.2",
     "awesome-typescript-loader": "^5.2.1",
     "css-loader": "^2.1.1",
+    "history": "^4.7.2",
     "html-webpack-plugin": "^3.2.0",
     "node-sass": "^4.11.0",
     "react": "^16.8.4",
