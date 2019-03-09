@@ -5,5 +5,25 @@
   "main": "index.js",
   "repository": "https://github.com/MathewBoyles/newventure.io.git",
   "author": "Mathew Boyles <hello@mathewboyles.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "awesome-typescript-loader": "^5.2.1",
+    "html-webpack-plugin": "^3.2.0",
+    "reflect-metadata": "^0.1.13",
+    "source-map-loader": "^0.2.4",
+    "ts-loader": "^5.3.3",
+    "tslint": "^5.13.1",
+    "typescript": "^3.3.3333",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.2.1"
+  },
+  "scripts": {
+    "build": "npx webpack --config webpack.config.js",
+    "start": "./node_modules/.bin/webpack-dev-server --port 8080",
+    "lint": "yarn tslint && yarn typecheck",
+    "tslint": "./node_modules/.bin/tslint --project ./tsconfig.json",
+    "typecheck": "tsc --project tsconfig.json --noEmit",
+    "test": "export ENV='test' && yarn generateAppSettingsFile && echo no tests yet"
+  }
 }
