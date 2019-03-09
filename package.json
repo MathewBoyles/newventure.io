@@ -1,0 +1,9 @@
+{
+  "name": "newventure.io",
+  "version": "1.0.0",
+  "description": "Website for newventure.io.",
+  "main": "index.js",
+  "repository": "https://github.com/MathewBoyles/newventure.io.git",
+  "author": "Mathew Boyles <hello@mathewboyles.com>",
+  "license": "MIT"
+}
